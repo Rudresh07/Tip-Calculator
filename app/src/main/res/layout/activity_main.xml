@@ -106,8 +106,8 @@
         android:id="@+id/TipAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/tip_amount"
-        tools:text="Tip Amount: $0.00"
+        android:text="Tip Amount:$0.00"
+        tools:text="@string/tip_amount"
         android:textSize="20dp"
         android:textColor="#adb5bd"
         android:layout_margin="20dp"/>
