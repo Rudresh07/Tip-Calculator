@@ -57,6 +57,7 @@ private lateinit var binding: ActivityMainBinding
 
         val stringInTextField = binding.Amount.text.toString()
         val cost = stringInTextField.toDouble()
+        val newCost:Double = cost
         val selectedId = binding.Option.checkedRadioButtonId
         val TipPercentage = when(selectedId){
 
@@ -67,18 +68,25 @@ private lateinit var binding: ActivityMainBinding
 
         var Tip = TipPercentage*cost
 
+
         val roundUp = binding.rounded.isChecked
 
         if (roundUp){
             Tip = kotlin.math.ceil(Tip)
         }
+        val TIP:Double = Tip
 
         //till now we just get the amount in form of a string to get the string or the answer in form of currency we will use currency formatter
 
         NumberFormat.getCurrencyInstance()
 
         val formattedTip = NumberFormat.getCurrencyInstance().format(Tip)
+
         binding.TipAmount.text = getString(R.string.tip_amount, formattedTip)
+
+        val totalAmount = TIP+newCost
+
+        binding.total.text = "Total Amount: ${totalAmount}"
     }
 
 

@@ -33,7 +33,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:layout_margin="10dp"
-          android:hint="Bill Amount"
+          android:hint="@string/amt"
           android:textColorHint="@color/black"
           android:textStyle="bold"
           android:inputType="numberDecimal"
@@ -48,7 +48,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="How was the service ?"
+        android:text="@string/question"
         android:textSize="15sp"
         android:textColor="#adb5bd"
         android:layout_marginLeft="10dp"
@@ -63,19 +63,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Option1"
-            android:text="Amazing (15%)"
+            android:text="@string/Option1"
             android:textSize="15sp"/>
         <RadioButton
             android:id="@+id/Option2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Good (13%)"
+            android:text="@string/Option2"
             android:textSize="15sp"/>
         <RadioButton
             android:id="@+id/Option3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Okay(10%)"
+            android:text="@string/Option3"
             android:textSize="15sp"/>
 
 
@@ -112,5 +112,14 @@
         android:textColor="#adb5bd"
         android:layout_margin="20dp"/>
 
-
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Total Amount: $0.00"
+        android:textColor="#adb5bd"
+        android:textSize="20sp"
+        tools:text="@string/total_amount"
+        />
 </LinearLayout>
